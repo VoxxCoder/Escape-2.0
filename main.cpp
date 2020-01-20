@@ -24,19 +24,22 @@ int main()
     string str;
 
     do {
-        cout<<"Quel personnage voulez-vous incarner ?"<<endl<<"1: Perso1"<<endl<<"2: Perso2"<<endl<<"3: Perso3"<<endl<<"4: Perso4"<<endl;
+        cout<<"\nQuel personnage voulez-vous incarner ?\n\n1: Personnage 1\n2: Personnage 2\n3: Personnage 3\n4: Personnage 4\n";
         cin>>choix;
         cin.clear();
         cin.ignore(10000, '\n');
     }
     while(choix<1 || choix>4);
-    cout<< "Bienvenue, "<<Personnages[choix-1]<<endl;
-    cout << "Lorsque la machine attend une réponse, vous pouvez simplement appuyer sur entrée pour revenir"
-            "au menu principal de votre personnage\n\n";
+    cout<< "\nBienvenue, "<<Personnages[choix-1]<<endl;
+    cout << "\nLorsque la machine attend une réponse, vous pouvez simplement appuyer sur entrée pour revenir"
+            " au menu principal de votre personnage\n\n";
     while(escape_termine == 0) {
         switch (choix) {
         case 1://Programme principal joueur 1--------------------------------------------------
-            faire_action("voulez vous 1 ou 2 ou 3 ou 4 ?", action);
+            faire_action("\n\nVoulez-vous...\n1 : Terminal poussiéreux\n"
+                         "2 : Terminal énigmatique\n"
+                         "3 : Grand tableau cadenassé\n"
+                         "4 : Message écrit à la craie\n\n", action);
             switch (action) {
             case 1:
                 action = 0; //remise à 0 pour pouvoir rechoisir action au prochain loop
@@ -88,7 +91,10 @@ int main()
             break;//---------------------------------------------------------------------------
         case 2://Programme principal joueur 2--------------------------------------------------
 
-            faire_action("voulez vous 1 ou 2 ou 3 ?", action);
+            faire_action("\n\nVoulez-vous...\n"
+                         "1 : Terminal de décryptage\n"
+                         "2 : Ordinateur dégradé\n"
+                         "3 : Afficheur numérique\n\n", action);
             switch (action) {
             case 1:
                 action = 0;
@@ -119,7 +125,7 @@ int main()
             case 3:
                 action = 0;
                 //ENIGME 2.3 ###############################
-                cout << "int mystere = tab[0]*tab[2]+ *(tab+3)*(*(tab+4)) +3*tab[1]*7;"; //=169
+                cout << "\n\nint mystere = vec[0]*vec[2]+ *(vec+3)*(*(vec+4)) +3*vec[1]*7;\n\n"; //=169
 
                 break;
                 //########################################
@@ -127,7 +133,10 @@ int main()
             break;//---------------------------------------------------------------------------
 
         case 3://Programme principal joueur 3--------------------------------------------------
-            faire_action("voulez vous 1 ou 2 ou 3 ?", action);
+            faire_action("\n\nVoulez-vous...\n"
+                         "1 : Terminal mystique\n"
+                         "2 : Cadenas numérique avec message\n "
+                         "3 : Coffre fort\n\n", action);
             switch (action) {
             case 1:
                 action = 0;
@@ -160,7 +169,9 @@ int main()
             break;//---------------------------------------------------------------------------
 
         case 4://Programme principal joueur 4--------------------------------------------------
-            faire_action("voulez vous 1 ou 2 ou 3 ?", action);
+            faire_action("\n\nVoulez-vous...\n1 : Message sur le mur\n"
+                         "2 : clé usb avec un programme\n"
+                         "3 : Terminal de cryptage ?\n\n", action);
             switch (action) {
             case 1:
                 action = 0;
