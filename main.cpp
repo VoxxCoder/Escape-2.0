@@ -19,7 +19,7 @@ int main()
     int tableau_final[5] = {0};
     int k;
     string fc_abracadabra = "void abracadabra(int x, int &y) {\nx+=2;\ny+=5;\n}\n\n";
-    string Personnages[4] = {"Personnage 1","Personnage 2","Personnage 3","Personnage 4"};
+    string Personnages[4] = {"Personnage1","Personnage 2","Personnage 3","Personnage 4"};
     string str;
 
     do {
