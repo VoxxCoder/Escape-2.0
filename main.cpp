@@ -80,7 +80,7 @@ int main()
             case 4:
                 action = 0;
                 //ENIGME 1.4 ###############################
-                cout << "Merci de coder ceci : 51°50'54.5\"N 0°XX'16.5\"W (7)\n"
+                cout << "Le coffre fort accepte cet animal crypté : 51°50'54.5\"N 0°XX'16.5\"W (7)\n"
                         "(Certains chiffres (XX) ont été raturés...)\n\n"; //coordonnées GPS : mot = lion
                 break;
                 //########################################
