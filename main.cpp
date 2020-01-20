@@ -116,7 +116,7 @@ int main()
                 cout << "Contrairement à un pointeur,"
                         "une référence requiert une étape indispensable lors de sa kljshyh{pvu (7), "
                         "quelle est-elle ?"
-                        "(Vous pourriez utiliser le grimoire des anciens notecpp.pdf pour y"
+                        "\n(Vous pourriez utiliser le grimoire des anciens notecpp.pdf pour y"
                         "trouver l'incantation nécessaire...)" << endl << endl;
                 entrer_reponse("initialisation", fc_abracadabra); //Donne la fonction abracadra pour avancer enigme 3.1
 
@@ -169,14 +169,14 @@ int main()
             break;//---------------------------------------------------------------------------
 
         case 4://Programme principal joueur 4--------------------------------------------------
-            faire_action("\n\nVoulez-vous...\n1 : Message sur le mur\n"
+            faire_action("\n\nVoulez-vous...\n1 : Message sur le mur avec clavier d'ordinateur\n"
                          "2 : clé usb avec un programme\n"
                          "3 : Terminal de cryptage ?\n\n", action);
             switch (action) {
             case 1:
                 action = 0;
                 //ENIGME 4.1 ###############################
-                cout << "Top left hand corner keyboard key crypted code ? (11)";
+                cout << "Top left hand corner keyboard key crypted code ? (11) ?\n";
                 entrer_reponse("p~nl{p", "Un dessin apparait et vous "
                                          "invite à utiliser un coffre fort muni de ce code..."
                                          "\nDe plus, quelqu'un a griffonné ceci sur un bout de papier : (~9~)\n\n");
