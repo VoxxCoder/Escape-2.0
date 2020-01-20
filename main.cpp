@@ -63,7 +63,8 @@ int main()
                 cout << "\nUn grand tableau est muni de 5 cadenas à chiffres... Pour l'instant, les combinaisons sont :\n";
                 for (int i=0;i<5;i++) cout << tableau_final[i] <<" " <<endl;
                 cout << "Quelle combinaison modifier ? (1, 2 ,3, 4, 5) Sinon, Entrez 6 \n";
-                cin>>k;
+                cin>>k; cout << ":"<< k << endl;
+                //if (k=='\r') break; //Retour menu si appui sur entrée
                 cin.clear();
                 cin.ignore(10000, '\n');
                 if(k>=0 && k<6) {
@@ -102,6 +103,7 @@ int main()
                 //Donner au joueur la possibilité d'utiliser la fonction decode
                 cout << "Terminal de décryptage... veuillez entrer la phrase cryptée :\n";
                 getline(cin,str);
+                if (str=="") break; //Annule si appui sur entrée
                 cout << "Terminal de décryptage... veuillez entrer la clé de cryptage :\n";
                 cin>>cle_cryptage;
                 cin.clear();
@@ -135,7 +137,7 @@ int main()
         case 3://Programme principal joueur 3--------------------------------------------------
             faire_action("\n\nVoulez-vous...\n"
                          "1 : Terminal mystique\n"
-                         "2 : Cadenas numérique avec message\n "
+                         "2 : Cadenas numérique avec message\n"
                          "3 : Coffre fort\n\n", action);
             switch (action) {
             case 1:
@@ -176,7 +178,7 @@ int main()
             case 1:
                 action = 0;
                 //ENIGME 4.1 ###############################
-                cout << "Top left hand corner keyboard key crypted code ? (11) ?\n";
+                cout << "\n\nTop left hand corner keyboard key crypted code ? (11) ?\n";
                 entrer_reponse("p~nl{p", "Un dessin apparait et vous "
                                          "invite à utiliser un coffre fort muni de ce code..."
                                          "\nDe plus, quelqu'un a griffonné ceci sur un bout de papier : (~9~)\n\n");
@@ -186,7 +188,7 @@ int main()
             case 2:
                 action = 0;
                 //ENIGME 4.2 ###############################
-                cout << "int vec[5] = {1,2,3,4,5};\nvec[3] = "
+                cout << "\n\nint vec[5] = {1,2,3,4,5};\nvec[3] = "
                         "*(vec+1)*vec[vec[3]]**vec+1;\nvec[2] = *(vec+vec[1]+2)+1;\nvec[*(vec)-1] = "
                         "*vec*(*vec+1)**(vec+2);\nfor(int i=0;i<5;i++) cout << vec[i] << endl;" << endl << endl;
 
@@ -198,6 +200,7 @@ int main()
                 //Donner au joueur la possibilité d'utiliser la fonction CODE
                 cout << "Terminal de cryptage... veuillez entrer la phrase à crypter : \n\n";
                 getline(cin,str);
+                if (str=="") break; //Annule si appui sur entrée
                 cout << "Terminal de cryptage... veuillez entrer la clé de cryptage : \n\n";
                 cin>>cle_cryptage;
                 cin.clear();
@@ -234,11 +237,11 @@ void acces_coffre() {
     cout << "Le coffre fort dispose de cinq compartiments...\nVeuillez entrer un code : ";
     string a;
     getline(cin, a);
-    if(a == "qspufdufe") { cout << "Le premier compartiment s'ouvre ! Il y a un message à l'intérieur : 0 --> 455\n\n";} //protected
-    else if (a == "p~nl{p") {cout << "Le deuxième compartiment s'ouvre ! Il y a un message à l'intérieur : 1 --> 732\n\n";} //escape
-    else if (a == "jgtkvcig") {cout << "Le troisième compartiment s'ouvre ! Il y a un message à l'intérieur : 2 --> 297\n\n";}//heritage
-    else if (a == "spvu") {cout << "Le quatrième compartiment s'ouvre ! Il y a un message à l'intérieur : 3 --> 913\n\n";}//lion
-    else if (a == "nabanaj_a") {cout << "Le cinquième compartiment s'ouvre ! Il y a un message à l'intérieur : 4 --> 139\n\n";}//reference
+    if(a == "qspufdufe") { cout << "\n\nLe premier compartiment s'ouvre ! Il y a un message à l'intérieur : 0 --> 455\n\n";} //protected
+    else if (a == "p~nl{p") {cout << "\n\nLe deuxième compartiment s'ouvre ! Il y a un message à l'intérieur : 1 --> 732\n\n";} //escape
+    else if (a == "jgtkvcig") {cout << "\n\nLe troisième compartiment s'ouvre ! Il y a un message à l'intérieur : 2 --> 297\n\n";}//heritage
+    else if (a == "spvu") {cout << "\n\nLe quatrième compartiment s'ouvre ! Il y a un message à l'intérieur : 3 --> 913\n\n";}//lion
+    else if (a == "nabanaj_a") {cout << "\n\nLe cinquième compartiment s'ouvre ! Il y a un message à l'intérieur : 4 --> 139\n\n";}//reference
     else cout << "\n\nRien ne se passe...\n\n";
 
 }
@@ -247,7 +250,7 @@ void cryptage(string txt, int c)
 {
   unsigned long length = txt.length();
   char tab[length];
-cout << "Phrase cryptee : ";
+cout << "Phrase cryptée : ";
   for (int i = 0; i < length; i++) {
           tab[i] = txt[i]+c;
           cout << tab[i];
@@ -259,7 +262,7 @@ void decryptage(string txt, int c)
 {
   int length = txt.length();
   char tab[length];
-cout << "Phrase decryptee : ";
+cout << "Phrase decryptée : ";
   for (int i = 0; i < length; i++) {
           tab[i] = txt[i]-c;
           cout << tab[i];
