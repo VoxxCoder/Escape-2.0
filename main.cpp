@@ -62,12 +62,11 @@ int main()
                 //ACCES TABLEAU FINAL 1.3 ###############################
                 cout << "\nUn grand tableau est muni de 5 cadenas à chiffres... Pour l'instant, les combinaisons sont :\n";
                 for (int i=0;i<5;i++) cout << tableau_final[i] <<" " <<endl;
-                cout << "Quelle combinaison modifier ? (1, 2 ,3, 4, 5) Sinon, Entrez 6 \n";
-                cin>>k; cout << ":"<< k << endl;
-                //if (k=='\r') break; //Retour menu si appui sur entrée
+                cout << "Quelle combinaison modifier ? (1, 2 ,3, 4, 5) Sinon, Entrez 0 \n";
+                cin>>k;
                 cin.clear();
                 cin.ignore(10000, '\n');
-                if(k>=0 && k<6) {
+                if(k>0 && k<6) {
                     cout << "Quelle combinaison voulez-vous entrer ?\n";
                     cin >> tableau_final[k-1];
                 }
