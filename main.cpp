@@ -18,8 +18,9 @@ int main()
     int cle_cryptage;
     int tableau_final[5] = {0};
     int k;
+    string phrase;
     string fc_abracadabra = "void abracadabra(int x, int &y) {\nx+=2;\ny+=5;\n}\n\n";
-    string Personnages[4] = {"Personnage1","Personnage 2","Personnage 3","Personnage 4"};
+    string Personnages[4] = {"Personnage 1","Personnage 2","Personnage 3","Personnage 4"};
     string str;
 
     do {
@@ -93,8 +94,13 @@ int main()
                 action = 0;
                 //ACCES FONCTION DECODE 2.1 ###############################
                 //Donner au joueur la possibilité d'utiliser la fonction decode
-
-
+                cout << "Terminal de décryptage... veuillez entrer la phrase cryptée :\n";
+                getline(cin,str);
+                cout << "Terminal de décryptage... veuillez entrer la clé de cryptage :\n";
+                cin>>cle_cryptage;
+                cin.clear();
+                cin.ignore(10000, '\n');
+                decryptage(str,cle_cryptage);
 
                 break;
                 //########################################
@@ -139,7 +145,7 @@ int main()
                 action = 0;
                 //ENIGME 3.2 ###################################
                 cout << "Je suis un symbole de Protection" << endl;
-                entrer_reponse("#", "Mot à crypter : \"protected\" (12)\n\n");
+                entrer_reponse("#", "Mot à crypter : \"protected\" (1)\n\n");
 
                 break;
                 //#############################################
@@ -179,9 +185,9 @@ int main()
                 action = 0;
                 //ACCES FONCTION CODE 4.3 ###############################
                 //Donner au joueur la possibilité d'utiliser la fonction CODE
-                cout << "Entrez la phrase à crypter : \n\n";
+                cout << "Terminal de cryptage... veuillez entrer la phrase à crypter : \n\n";
                 getline(cin,str);
-                cout << "Entrez la clé de cryptage : \n\n";
+                cout << "Terminal de cryptage... veuillez entrer la clé de cryptage : \n\n";
                 cin>>cle_cryptage;
                 cin.clear();
                 cin.ignore(10000, '\n');
