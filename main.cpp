@@ -19,7 +19,7 @@ int main()
     int tableau_final[5] = {0};
     int k;
     string fc_abracadabra = "void abracadabra(int x, int &y) {\nx+=2;\ny+=5;\n}\n\n";
-    string Personnages[4] = {"Perso1","Perso2","Perso3","Perso4"};
+    string Personnages[4] = {"Personnage 1","Personnage 2","Personnage 3","Personnage 4"};
     string str;
 
     do {
@@ -93,6 +93,7 @@ int main()
                 action = 0;
                 //ACCES FONCTION DECODE 2.1 ###############################
                 //Donner au joueur la possibilité d'utiliser la fonction decode
+
 
 
                 break;
