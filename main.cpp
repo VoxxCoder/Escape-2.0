@@ -35,7 +35,8 @@ int main()
     }
     while(choix<1 || choix>4);
     cout<< "\nBienvenue, "<<Personnages[choix-1]<<endl;
-    cout << "\nLorsque la machine attend une réponse, vous pouvez simplement appuyer sur entrée pour revenir"
+    cout << "\nLorsque la machine attend une réponse, vous pouvez la saisir et appuyer sur entrée,"
+            " ou simplement appuyer sur entrée pour revenir"
             " au menu principal de votre personnage\n\n";
     while(escape_termine == 0) {
         switch (choix) {
@@ -80,7 +81,9 @@ int main()
                 }
                 if(tableau_final[0] == 455 && tableau_final[1]==732 && tableau_final[2] == 297 && tableau_final[3]==913 && tableau_final[4]==139)
                 {
-                    cout << "\nBravo !\n";
+                    cout << "\nBravo ! Vous êtes arrivé au bout et avez découvert le trésor caché derrière"
+                            "le tableau : toute notre estime !\n"
+                            "Quelle équipe vous faites !\n\n";
                     escape_termine = 1;
                 }
                 break;
@@ -89,7 +92,7 @@ int main()
                 action = 0;
                 //ENIGME 1.4 ###############################
                 cout << "\nVous trouvez un message écrit à la va vite sur un mur :\n"
-                        "Le coffre fort accepte cet animal crypté : 51°50'54.5\"N 0°XX'16.5\"W (7)\n"
+                        "Le coffre fort accepte cet animal crypté : 51°50'54.5\"N 0°XX'16.5\"W (7)\n\n"
                         "(Certains chiffres (XX) ont été raturés...)\n\n"; //coordonnées GPS : mot = lion
                 break;
                 //########################################
@@ -126,10 +129,11 @@ int main()
                 action = 0;
                 //ENIGME 2.2 ###############################
                 cout << "Contrairement à un pointeur,"
-                        "une référence requiert une étape indispensable lors de sa kljshyh{pvu (7), "
+                        "une ylmlylujl (7) requiert une étape indispensable lors de sa kljshyh{pvu (7), "
                         "quelle est-elle ?"
                         "\n(Vous pourriez utiliser le grimoire des anciens notecpp.pdf pour y "
-                        "trouver l'incantation nécessaire...)" << endl << endl;
+                        "trouver l'incantation nécessaire...)\n"
+                        "(Appuyer sur Entrée pour quitter l'ordinateur...)\n\n";
                 entrer_reponse("initialisation", fc_abracadabra); //Donne la fonction abracadra pour avancer enigme 3.1
 
                 break;
@@ -191,7 +195,7 @@ int main()
         case 4://Programme principal joueur 4--------------------------------------------------
             faire_action("\n\nVoulez-vous...\n1 : Message sur le mur avec clavier d'ordinateur\n"
                          "2 : clé usb avec un programme\n"
-                         "3 : Terminal de cryptage ?\n\n", action);
+                         "3 : Terminal de cryptage \n\n", action);
             switch (action) {
             case 1:
                 action = 0;
