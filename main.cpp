@@ -24,6 +24,10 @@ int main()
     string str;
 
     do {
+        cout << "\nCet escape game se joue à quatre personnes, chacun incarnant un personnage différent."
+                "\nLa plupart des énigmes ont un rapport avec le C++ ou la programmation."
+                "\nVous devrez coopérer pour venir à bout de cette épreuve.\n"
+                "Hormis énigmes de type code, les réponses à entrer ne comportent jamais de majuscule\n";
         cout<<"\nQuel personnage voulez-vous incarner ?\n\n1: Personnage 1\n2: Personnage 2\n3: Personnage 3\n4: Personnage 4\n";
         cin>>choix;
         cin.clear();
@@ -44,15 +48,19 @@ int main()
             case 1:
                 action = 0; //remise à 0 pour pouvoir rechoisir action au prochain loop
                 //ENIGME 1.1 #####################################
-                cout << "Soit une classe A, donner oh#surwrw|sh#gh#od#phwkrgh (3) qui surcharge l’opérateur + "
-                        "avec un argument de type A nommé a" << endl;
-                entrer_reponse("A operator+(A a);", "XX = 33\n\n");
+                cout << "\nLe terminal affiche le message suivant : "
+                        "\n\nSoit une classe A, donner oh#surwrw|sh#gh#od#phwkrgh (3) qui surcharge l’opérateur + "
+                        "avec un argument de type A nommé a :\n"
+                        "(Taper Entree pour quitter le terminal)\n\n" << endl;
+                entrer_reponse("A operator+(A a);", "\n\nLe terminal emet un bip et vous renvoie le message"
+                                                    "suivant : XX = 33\n\n");
                 break;
                 //#####################################
             case 2:
                 action = 0;
                 //ENIGME 1.2 ###############################
-                cout << "La racine du r~xyjwj (5)" << endl << endl; //La racine du mystere
+                cout << "La racine du r~xyjwj (5) ?\n"
+                        "(Taper Entree pour vous éloigner...)\n\n"; //La racine du mystere
                 entrer_reponse("13", "Mot à crypter : \"heritage\" (~...~) L'inscription entre"
                                      " parenthèses a été raturée, elle est illisible...\n\n"); //code coffre fort
                 break;
@@ -80,7 +88,8 @@ int main()
             case 4:
                 action = 0;
                 //ENIGME 1.4 ###############################
-                cout << "Le coffre fort accepte cet animal crypté : 51°50'54.5\"N 0°XX'16.5\"W (7)\n"
+                cout << "\nVous trouvez un message écrit à la va vite sur un mur :\n"
+                        "Le coffre fort accepte cet animal crypté : 51°50'54.5\"N 0°XX'16.5\"W (7)\n"
                         "(Certains chiffres (XX) ont été raturés...)\n\n"; //coordonnées GPS : mot = lion
                 break;
                 //########################################
@@ -100,6 +109,8 @@ int main()
                 action = 0;
                 //ACCES FONCTION DECODE 2.1 ###############################
                 //Donner au joueur la possibilité d'utiliser la fonction decode
+                cout << "\nVous vous installez au poste de cryptage. Il semble nécessiter une phrase à crypter ainsi"
+                        " qu'une clé de cryptage numérique...\n\n";
                 cout << "Terminal de décryptage... veuillez entrer la phrase cryptée :\n";
                 getline(cin,str);
                 if (str=="") break; //Annule si appui sur entrée
@@ -117,7 +128,7 @@ int main()
                 cout << "Contrairement à un pointeur,"
                         "une référence requiert une étape indispensable lors de sa kljshyh{pvu (7), "
                         "quelle est-elle ?"
-                        "\n(Vous pourriez utiliser le grimoire des anciens notecpp.pdf pour y"
+                        "\n(Vous pourriez utiliser le grimoire des anciens notecpp.pdf pour y "
                         "trouver l'incantation nécessaire...)" << endl << endl;
                 entrer_reponse("initialisation", fc_abracadabra); //Donne la fonction abracadra pour avancer enigme 3.1
 
@@ -147,7 +158,15 @@ int main()
                          << endl << "(*pt)++;" << endl << "b--;"
                          << endl << "cout << (*pt)*(*pt)*b; //Quelle valeur est affichée"
                          << endl << endl;
-                entrer_reponse("54", " Mot à crypter : \"reference\" (-4)");
+                entrer_reponse("54", "\nLe terminal se déverrouille et une boite mail apparait."
+                                     "\n------------------------------------------------------------"
+                                     "\nDear all,"
+                                     "\nPlease find below one of the passwords for the safe's"
+                                     "\n\npassword : \"reference\" (-4)"
+                                     "\n\n\nRemember to encrypt it before use"
+                                     "\n\nBest regards,"
+                                     "\nThe Director\n\n"
+                                     "\n------------------------------------------------------------");
 
                 break;
                 //#############################################
@@ -177,7 +196,8 @@ int main()
             case 1:
                 action = 0;
                 //ENIGME 4.1 ###############################
-                cout << "\n\nTop left hand corner keyboard key crypted code ? (11) ?\n";
+                cout << "\n\nI am the top left hand corner key on a regular keyboard."
+                        "\nMy full name, once encrypted, is... ? (11) ?\n";
                 entrer_reponse("p~nl{p", "Un dessin apparait et vous "
                                          "invite à utiliser un coffre fort muni de ce code..."
                                          "\nDe plus, quelqu'un a griffonné ceci sur un bout de papier : (~9~)\n\n");
@@ -197,6 +217,8 @@ int main()
                 action = 0;
                 //ACCES FONCTION CODE 4.3 ###############################
                 //Donner au joueur la possibilité d'utiliser la fonction CODE
+                cout << "\nVous vous installez au poste de cryptage. Il semble nécessiter une phrase à crypter ainsi"
+                        " qu'une clé de cryptage numérique...\n\n";
                 cout << "Terminal de cryptage... veuillez entrer la phrase à crypter : \n\n";
                 getline(cin,str);
                 if (str=="") break; //Annule si appui sur entrée
