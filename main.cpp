@@ -160,17 +160,17 @@ int main()
                 cout << "int a=2;" << endl <<"int b=3;" << endl << "int * pt = &a;"
                      << endl << "abracadabra(*pt, b);"
                          << endl << "(*pt)++;" << endl << "b--;"
-                         << endl << "cout << (*pt)*(*pt)*b; //Quelle valeur est affichée"
+                         << endl << "cout << (*pt)*(*pt)*b; //Quelle valeur est affichée ?"
                          << endl << endl;
                 entrer_reponse("54", "\nLe terminal se déverrouille et une boite mail apparait."
-                                     "\n------------------------------------------------------------"
+                                     "\n\n------------------------------------------------------------"
                                      "\nDear all,"
-                                     "\nPlease find below one of the passwords for the safe's"
+                                     "\nPlease find below one of the passwords for the safe"
                                      "\n\npassword : \"reference\" (-4)"
                                      "\n\n\nRemember to encrypt it before use"
                                      "\n\nBest regards,"
                                      "\nThe Director\n\n"
-                                     "\n------------------------------------------------------------");
+                                     "\n\n------------------------------------------------------------");
 
                 break;
                 //#############################################
@@ -211,9 +211,12 @@ int main()
             case 2:
                 action = 0;
                 //ENIGME 4.2 ###############################
-                cout << "\n\nint vec[5] = {1,2,3,4,5};\nvec[3] = "
+                cout << "\n\nVous trouvez le programme suivant sur la clé usb : "
+                        "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+                        "\n\nint vec[5] = {1,2,3,4,5};\nvec[3] = "
                         "*(vec+1)*vec[vec[3]]**vec+1;\nvec[2] = *(vec+vec[1]+2)+1;\nvec[*(vec)-1] = "
-                        "*vec*(*vec+1)**(vec+2);\nfor(int i=0;i<5;i++) cout << vec[i] << endl;" << endl << endl;
+                        "*vec*(*vec+1)**(vec+2);\nfor(int i=0;i<5;i++) cout << vec[i] << endl;\n\n"
+                        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
 
                 break;
                 //########################################
