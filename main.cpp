@@ -50,7 +50,11 @@ int main()
             case 1:
                 action = 0; //remise a 0 pour pouvoir rechoisir action au prochain loop
                 //ENIGME 1.1 #####################################
-                cout << "\nLe terminal affiche le message suivant : "
+                cout << "\nBouah ! Vous en avez plein les mains ! Quelle est cette antiquite ?\n"
+                        "Personne n'a touché cet ancetre depuis longtemps !\n"
+                        "Quoi qu'il en soit, une boite dialogue attend son liberateur, telle l'epee dans la roche se"
+                        " languissant de son roi\n"
+                        "Elle vous adresse le message suivant :\n\n"
                         "\n\nSoit une classe A, donner oh#surwrw|sh#gh#od#phwkrgh (3) qui surcharge l’operateur + "
                         "avec un argument de type A nomme a : (Entrez votre reponse)\n"
                         "(Taper Entree pour quitter le terminal)\n\n" << endl;
@@ -61,7 +65,9 @@ int main()
             case 2:
                 action = 0;
                 //ENIGME 1.2 ###############################
-                cout << "La racine du r~xyjwj (5) ?\n"
+                cout << "Ce terminal aux allures folkloriques semble empreint d'une certaine sagesse, quoique mysterieux\n"
+                        "Il vous adresse cette devinette :\n\n"
+                        "La racine du r~xyjwj (5) ?\n"
                         "(Entrez votre reponse)\n\n"; //La racine du mystere
                 entrer_reponse("13", "Mot a crypter : \"heritage\" (~...~) L'inscription entre"
                                      " parentheses a ete raturee, elle est illisible...\n\n"); //code coffre fort
@@ -99,9 +105,8 @@ int main()
             case 4:
                 action = 0;
                 //ENIGME 1.4 ###############################
-                cout << "\nVous trouvez un message ecrit a la va vite sur un mur :\n"
-                        "Le coffre fort accepte cet animal crypte : 51°50'54.5\"N 0°XX'16.5\"W (7)\n\n"
-                        "(Certains chiffres (XX) ont ete ratures...)\n\n"; //coordonnees GPS : mot = lion
+                cout << "\nVous trouvez un message ecrit a la va vite sur un mur :\n\n"
+                        "Le coffre fort accepte cet animal crypte : 51°50'54.5\"N 0°XX'16.5\"W (7)\n\n"; //coordonnees GPS : mot = lion
                 break;
                 //########################################
 
@@ -175,7 +180,7 @@ int main()
                          << endl << "(*pt)++;" << endl << "b--;"
                          << endl << "cout << (*pt)*(*pt)*b; //Quelle valeur est affichee ?"
                          << endl << endl;
-                entrer_reponse("54", "\nLe terminal se deverrouille et une boite mail apparait."
+                entrer_reponse("63", "\nLe terminal se deverrouille et une boite mail apparait."
                                      "\n\n------------------------------------------------------------"
                                      "\nDear all,"
                                      "\nPlease find below one of the passwords for the safe"
