@@ -28,7 +28,20 @@ int main()
         cout << "\nCet escape game se joue a quatre personnes, chacun incarnant un personnage different."
                 "\nLa plupart des enigmes ont un rapport avec le C++ ou la programmation."
                 "\nVous devrez cooperer pour venir a bout de cette epreuve.\n"
-                "Hormis enigmes de type code, les reponses a entrer ne comportent jamais de majuscule\n";
+                "Hormis enigmes de type code, les reponses a entrer ne comportent jamais de majuscule\n"
+                "Preparez-vous a entrer dans l'escape ...\n\n\n"
+                "Bonjour et Bienvenue a PlankalKul.\n"
+                "Nous vous avons amene a 3000 m sous terre dans cette ancienne mine de cuivre en plein coeur de l'Alaska.\n"
+                "Nous ne sommes pas ici pour extraire de l'or mais bel et bien pour interpreter la matiere.\n"
+                "Ici tout bouge tres vite, vous etes en plein coeur d'un ordinateur !\n\n"
+                "Nous avons inculque des mecanismes present ici dans vos habitudes de vie.\n"
+                "Nous vous avons suivis et nous avons guide vos choix afin que vous puissiez developper des compétences specifiques "
+                "qui vous permettront de decrypter ce nouveau langage.\n"
+                "Aujourd'hui, vous etes prets !\n"
+                "Tous les 4, vous n'avez aucun point commun a part ce langage que nous avons decouvert : l'Oriente Objet.\n"
+                "Aujourd'hui, je vous demande une chose tres simple, ouvrir le tableau qui est pour le moment verouille.\n"
+                "L'experience est preferable en plein ecran.\n"
+                "Bon jeu et bon courage !\n\n";
         cout<<"\nQuel personnage voulez-vous incarner ?\n\n1: Personnage 1\n2: Personnage 2\n3: Personnage 3\n4: Personnage 4\n";
         cin>>choix;
         cin.clear();
@@ -42,7 +55,7 @@ int main()
     while(escape_termine == 0) {
         switch (choix) {
         case 1://Programme principal joueur 1--------------------------------------------------
-            faire_action("\n\nQue voulez-vous examiner ?\n1 : Terminal poussiereux\n"
+            faire_action("\n\nVous trouvez plusieurs items, que voulez-vous examiner ?\n1 : Terminal poussiereux\n"
                          "2 : Terminal enigmatique\n"
                          "3 : Grand tableau cadenasse\n"
                          "4 : Message ecrit a la craie\n\n", action);
@@ -51,7 +64,7 @@ int main()
                 action = 0; //remise a 0 pour pouvoir rechoisir action au prochain loop
                 //ENIGME 1.1 #####################################
                 cout << "\nBouah ! Vous en avez plein les mains ! Quelle est cette antiquite ?\n"
-                        "Personne n'a touché cet ancetre depuis longtemps !\n"
+                        "Personne n'a touche cet ancetre depuis longtemps !\n"
                         "Quoi qu'il en soit, une boite dialogue attend son liberateur, telle l'epee dans la roche se"
                         " languissant de son roi\n"
                         "Elle vous adresse le message suivant :\n\n"
@@ -76,7 +89,7 @@ int main()
             case 3:
                 action = 0;
                 //ACCES TABLEAU FINAL 1.3 ###############################
-                cout << "\nUn grand tableau est muni de 5 cadenas a chiffres... Pour l'instant, les combinaisons sont :\n\n";
+                cout << "\nUn grand tableau est muni d'un cadenas a 5 chiffres... Pour l'instant, les combinaisons sont :\n\n";
                 for (int i=0;i<5;i++) cout << tableau_final[i] <<" " <<endl;
                 cout << "\nQuelle combinaison modifier ? (1, 2 ,3, 4, 5) Sinon, Entrez 0 \n";
                 cin>>k;
@@ -97,6 +110,8 @@ int main()
                 {
                     cout << "\nBravo ! Vous êtes arrive au bout et avez decouvert le tresor cache derriere"
                             "le tableau : toute notre estime !\n"
+                            "Grace a vous nous comprenons ce nouveau langage et nous pouvons l'utiliser pour developper"
+                            "de grand projet !\n"
                             "Quelle equipe vous faites !\n\n";
                     escape_termine = 1;
                 }
@@ -116,7 +131,7 @@ int main()
             break;//---------------------------------------------------------------------------
         case 2://Programme principal joueur 2--------------------------------------------------
 
-            faire_action("\n\nQue voulez-vous examiner ?\n"
+            faire_action("\n\nVous trouvez plusieurs items, que voulez-vous examiner ?\n"
                          "1 : Terminal de decryptage\n"
                          "2 : Ordinateur degrade\n"
                          "3 : Afficheur numerique\n\n", action);
@@ -167,7 +182,7 @@ int main()
             break;//---------------------------------------------------------------------------
 
         case 3://Programme principal joueur 3--------------------------------------------------
-            faire_action("\n\nQue voulez-vous examiner ?\n"
+            faire_action("\n\nVous trouvez plusieurs items, que voulez-vous examiner ?\n"
                          "1 : Terminal mystique\n"
                          "2 : Cadenas numerique avec message\n"
                          "3 : Coffre fort\n\n", action);
@@ -195,7 +210,7 @@ int main()
             case 2:
                 action = 0;
                 //ENIGME 3.2 ###################################
-                cout << "Je suis un symbole de Protection" << endl;
+                cout << "Je suis un symbole de Protection (Entrez votre reponse)"<< endl;
                 entrer_reponse("#", "Mot a crypter : \"protected\" (1)\n\n");
 
                 break;
@@ -211,7 +226,7 @@ int main()
             break;//---------------------------------------------------------------------------
 
         case 4://Programme principal joueur 4--------------------------------------------------
-            faire_action("\n\nQue voulez-vous examiner ?\n1 : Message sur le mur avec clavier d'ordinateur\n"
+            faire_action("\n\nVous trouvez plusieurs items, que voulez-vous examiner ?\n1 : Message sur le mur avec clavier d'ordinateur\n"
                          "2 : cle usb avec un programme\n"
                          "3 : Terminal de cryptage \n\n", action);
             switch (action) {
@@ -300,7 +315,7 @@ void cryptage(string txt, int c)
   unsigned long length = txt.length();
   char tab[length];
 cout << "Phrase cryptee : ";
-  for (int i = 0; i < length; i++) {
+  for (unsigned long i = 0; i < length; i++) {
           tab[i] = txt[i]+c;
           cout << tab[i];
    }
@@ -318,4 +333,3 @@ cout << "Phrase decryptee : ";
    }
   cout << endl;
 }
-
