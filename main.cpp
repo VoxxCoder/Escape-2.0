@@ -73,7 +73,7 @@ int main()
                         "Elle vous adresse le message suivant :\n\n"
                         "\n\nSoit une classe A, donner oh#surwrw|sh#gh#od#phwkrgh (3) qui surcharge l’operateur + "
                         "avec un argument de type A nomme a : \n(Entrez votre reponse, syntaxe correcte exigee !)\n\n";
-                entrer_reponse("A operator+(A a);", "\n Bip ! Mot a crypter : \"protected\" (1)\n\n");
+                entrer_reponse("A operator+(A a);", "\n Bip ! Mot a crypter pour coffre fort : \"protected\" (1)\n\n");
                 break;
                 //#####################################
             case 2:
