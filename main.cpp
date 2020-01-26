@@ -20,8 +20,8 @@ int main()
     int k;
     int combinaisons[] = {455,732,297,913,139};
     string phrase;
-    string fc_abracadabra = "void abracadabra(int x, int &y) {\nx+=2;\ny+=5;\n}\n\n";
-    string Personnages[4] = {"Personnage 1","Personnage 2","Personnage 3","Personnage 4"};
+    string fc_abracadabra = "\nBip !\n\nvoid abracadabra(int x, int &y) {\nx+=2;\ny+=5;\n}\n\n";
+    string Personnages[4] = {"M. Saturne","Dr Andromeda","John Valjohn","Comtesse Lovelace"};
     string str;
 
     do {
@@ -39,7 +39,7 @@ int main()
                 "qui vous permettront de decrypter ce nouveau langage.\n"
                 "Aujourd'hui, vous etes prets !\n"
                 "Tous les 4, vous n'avez aucun point commun a part ce langage que nous avons decouvert : l'Oriente Objet.\n"
-                "Aujourd'hui, je vous demande une chose tres simple, ouvrir le tableau qui est pour le moment verouille.\n"
+                "Aujourd'hui, je vous demande une chose tres simple, ouvrir le tableau qui est pour le moment verrouille.\n"
                 "L'experience est preferable en plein ecran.\n"
                 "Bon jeu et bon courage !\n\n";
         cout<<"\nQuel personnage voulez-vous incarner ?\n\n1: Personnage 1\n2: Personnage 2\n3: Personnage 3\n4: Personnage 4\n";
@@ -69,10 +69,8 @@ int main()
                         " languissant de son roi\n"
                         "Elle vous adresse le message suivant :\n\n"
                         "\n\nSoit une classe A, donner oh#surwrw|sh#gh#od#phwkrgh (3) qui surcharge l’operateur + "
-                        "avec un argument de type A nomme a : (Entrez votre reponse)\n"
-                        "(Taper Entree pour quitter le terminal)\n\n" << endl;
-                entrer_reponse("A operator+(A a);", "\n\nLe terminal emet un bip et vous renvoie le message"
-                                                    "suivant : XX = 33\n\n");
+                        "avec un argument de type A nomme a : \n(Entrez votre reponse, syntaxe correcte exigee !)\n\n";
+                entrer_reponse("A operator+(A a);", "\n Bip ! Mot a crypter : \"protected\" (1)\n\n");
                 break;
                 //#####################################
             case 2:
@@ -82,14 +80,14 @@ int main()
                         "Il vous adresse cette devinette :\n\n"
                         "La racine du r~xyjwj (5) ?\n"
                         "(Entrez votre reponse)\n\n"; //La racine du mystere
-                entrer_reponse("13", "Mot a crypter : \"heritage\" (~...~) L'inscription entre"
+                entrer_reponse("13", "\n Bip ! Mot a crypter : \"heritage\" (~...~) L'inscription entre"
                                      " parentheses a ete raturee, elle est illisible...\n\n"); //code coffre fort
                 break;
                 //########################################
             case 3:
                 action = 0;
                 //ACCES TABLEAU FINAL 1.3 ###############################
-                cout << "\nUn grand tableau est muni d'un cadenas a 5 chiffres... Pour l'instant, les combinaisons sont :\n\n";
+                cout << "\nUn grand tableau est muni d'un cadenas a 5 combinaisons... Pour l'instant, les combinaisons sont :\n\n";
                 for (int i=0;i<5;i++) cout << tableau_final[i] <<" " <<endl;
                 cout << "\nQuelle combinaison modifier ? (1, 2 ,3, 4, 5) Sinon, Entrez 0 \n";
                 cin>>k;
@@ -99,8 +97,8 @@ int main()
                     cout << "Quelle combinaison voulez-vous entrer ?\n";
                     cin >> tableau_final[k-1];
                     if(tableau_final[k-1] == combinaisons[k-1]) {
-                        cout << "\n\nVous percevez les cliquetis de ce qui semble être un complexe mecanisme"
-                                " de verrouillage. Cette combinaison doit être correcte ! \n\n";
+                        cout << "\n\nVous percevez les cliquetis de ce qui semble etre un complexe mecanisme"
+                                " de verrouillage. Cette combinaison doit etre correcte ! \n\n";
                     }
                     else {
                         cout << "\n\nHmm... Rien ne se passe...\n\n";
@@ -108,7 +106,7 @@ int main()
                 }
                 if(tableau_final[0] == 455 && tableau_final[1]==732 && tableau_final[2] == 297 && tableau_final[3]==913 && tableau_final[4]==139)
                 {
-                    cout << "\nBravo ! Vous êtes arrive au bout et avez decouvert le tresor cache derriere"
+                    cout << "\nBravo ! Vous etes arrive au bout et avez decouvert le tresor cache derriere"
                             "le tableau : toute notre estime !\n"
                             "Grace a vous nous comprenons ce nouveau langage et nous pouvons l'utiliser pour developper"
                             "de grand projet !\n"
@@ -121,7 +119,7 @@ int main()
                 action = 0;
                 //ENIGME 1.4 ###############################
                 cout << "\nVous trouvez un message ecrit a la va vite sur un mur :\n\n"
-                        "Le coffre fort accepte cet animal crypte : 51°50'54.5\"N 0°XX'16.5\"W (7)\n\n"; //coordonnees GPS : mot = lion
+                        "Le coffre fort accepte cet animal crypte (sans majuscule) : 51°50'54.5\"N 0°XX'16.5\"W (7)\n\n"; //coordonnees GPS : mot = lion
                 break;
                 //########################################
 
@@ -190,6 +188,7 @@ int main()
             case 1:
                 action = 0;
                 //ENIGME 3.1 ###################################
+                cout << "\n\nHocus pocus ! Ce terminal de messagerie requiert un mot de passe pour demarrer\n\n";
                 cout << "int a=2;" << endl <<"int b=3;" << endl << "int * pt = &a;"
                      << endl << "abracadabra(*pt, b);"
                          << endl << "(*pt)++;" << endl << "b--;"
@@ -210,8 +209,10 @@ int main()
             case 2:
                 action = 0;
                 //ENIGME 3.2 ###################################
-                cout << "Je suis un symbole de Protection (Entrez votre reponse)"<< endl;
-                entrer_reponse("#", "Mot a crypter : \"protected\" (1)\n\n");
+                cout << "\nFleuron de technologie, ce cadenas digital vous adresse ce message : \n\n"
+                        "Je suis un symbole de Protection (Entrez votre reponse)"<< endl;
+                entrer_reponse("#", "\n\nLe terminal emet un bip et vous renvoie le message"
+                                    "suivant : XX = 33\n\n");
 
                 break;
                 //#############################################
@@ -226,7 +227,8 @@ int main()
             break;//---------------------------------------------------------------------------
 
         case 4://Programme principal joueur 4--------------------------------------------------
-            faire_action("\n\nVous trouvez plusieurs items, que voulez-vous examiner ?\n1 : Message sur le mur avec clavier d'ordinateur\n"
+            faire_action("\n\nVous trouvez plusieurs items, que voulez-vous examiner ?\n"
+                         "1 : Hologramme avec clavier d'ordinateur\n"
                          "2 : cle usb avec un programme\n"
                          "3 : Terminal de cryptage \n\n", action);
             switch (action) {
