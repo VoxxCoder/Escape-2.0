@@ -308,7 +308,7 @@ void acces_coffre() {
     getline(cin, a);
     if(a == "qspufdufe") { cout << "\n\nLe premier compartiment s'ouvre ! Il y a un message a l'interieur : 1 --> 455\n\n";} //protected
     else if (a == "p~nl{p") {cout << "\n\nLe deuxieme compartiment s'ouvre ! Il y a un message a l'interieur : 2 --> 732\n\n";} //escape
-    else if (a == "jgtkvcig") {cout << "\n\nLe troisieme compartiment s'ouvre ! Il y a un message a l'interieur : 3 --> 297\n\n";}//heritage
+    else if (a == "qn{r}jpn") {cout << "\n\nLe troisieme compartiment s'ouvre ! Il y a un message a l'interieur : 3 --> 297\n\n";}//heritage
     else if (a == "spvu") {cout << "\n\nLe quatrieme compartiment s'ouvre ! Il y a un message a l'interieur : 4 --> 913\n\n";}//lion
     else if (a == "nabanaj_a") {cout << "\n\nLe cinquieme compartiment s'ouvre ! Il y a un message a l'interieur : 5 --> 139\n\n";}//reference
     else cout << "\n\nRien ne se passe...\n\n";
